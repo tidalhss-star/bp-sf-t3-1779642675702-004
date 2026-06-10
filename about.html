@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마포 셔츠룸 | 주식투자 정보 & 트렌드</title>
+    <meta name="description" content="마포 셔츠룸에서 전하는 주식투자 인사이트. 초보부터 고수까지, 재미있는 투자 이야기와 현실적인 조언을 나눠요. 지금 010-6279-0862로 문의하세요.">
+    <meta name="keywords" content="마포 셔츠룸, 주식투자, 마포 주식, 셔츠룸, 투자정보, 마포구">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-mono-chrome">
+    <link rel="canonical" href="https://sf-t3-1779642675702-004.vercel.app">
+    <meta property="og:title" content="마포 셔츠룸 | 주식투자 정보 & 트렌드">
+    <meta property="og:description" content="마포 셔츠룸에서 전하는 주식투자 인사이트. 초보부터 고수까지, 재미있는 투자 이야기와 현실적인 조언을 나눠요.">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        h1, h2, h3, h4 {
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.75rem;
+            margin-top: 2rem;
+        }
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            margin-top: 1.5rem;
+        }
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: #003366;
+        }
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 12px 20px;
+        }
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+        }
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+        .nav-links a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #1d1d1f;
+        }
+        .nav-links a:hover {
+            color: #0066cc;
+        }
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        .hamburger-menu span {
+            width: 25px;
+            height: 3px;
+            background: #1d1d1f;
+            border-radius: 2px;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: #ffffff;
+                padding: 20px;
+                border-bottom: 1px solid #e0e0e0;
+                gap: 15px;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .hamburger-menu {
+                display: flex;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.4rem;
+            }
+        }
+        .tel-link {
+            display: inline-block;
+            background: #1d1d1f;
+            color: #ffffff;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.2s;
+        }
+        .tel-link:hover {
+            background: #333333;
+            color: #ffffff;
+        }
+        .hero {
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #6e6e73;
+            max-width: 700px;
+            margin: 0 auto 1.5rem;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin: 40px 0;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        .card h3 {
+            margin-top: 0;
+        }
+        .faq-item {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 12px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .faq-item h4 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        .faq-item p {
+            margin-bottom: 0;
+            color: #6e6e73;
+        }
+        .cta-section {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin: 50px 0;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .cta-section h2 {
+            margin-top: 0;
+        }
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #6e6e73;
+            font-size: 0.9rem;
+            border-top: 1px solid #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-wrapper">
+            <div class="logo">마포 셔츠룸</div>
+            <nav>
+                <div class="hamburger-menu" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/">홈</a></li>
+                    <li><a href="/info">정보</a></li>
+                    <li><a href="/trading">트레이딩</a></li>
+                    <li><a href="/community">커뮤니티</a></li>
+                    <li><a href="tel:01062790862" class="tel-link">010-6279-0862</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>마포 셔츠룸 주식 정보</h1>
+            <p>형, 주식 좀 한다는 친구들이 모이는 곳. 마포 셔츠룸에서 진짜 투자 얘기 나눠보자.</p>
+        </section>
+
+        <section>
+            <h2>왜 마포 셔츠룸인가?</h2>
+            <p>내가 처음 주식 시작했을 때, 아무도 알려주는 사람이 없었어. 인터넷에 떠도는 정보는 너무 많고, 다 믿기엔 좀 그렇잖아. 근데 마포 셔츠룸에 와서 직접 사람들 만나니까 확실히 달라. 실전 경험담, 망한 썰, 대박 난 썰 다 나와. 형들도 한 번 와봐.</p>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>초보도 환영</h3>
+                    <p>처음이면 걱정되겠지만, 여기선 다들 친절해. 기초 용어부터 실전 팁까지 같이 배워가면 돼.</p>
+                </div>
+                <div class="card">
+                    <h3>실시간 소통</h3>
+                    <p>카톡방이랑 오프라인 모임 동시에 돌아가. 차트 분석이랑 종목 토론, 진짜 빠르게 업데이트돼.</p>
+                </div>
+                <div class="card">
+                    <h3>지역 기반</h3>
+                    <p>마포구 중심으로 활동하니까 가깝고 편해. 홍대, 합정, 상수 쪽 직장인들 많이 와.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>마포 주식투자 트렌드</h2>
+            <p>요즘 마포 셔츠룸에서 가장 핫한 얘기는 역시 코스피 3000 돌파 이후 전략이야. 다들 "지금 올라탄 건지, 꼭지인지" 고민 중이거든. 내 생각엔 단기보다는 장기 우량주에 집중하는 게 낫다고 봐. 삼성전자, SK하이닉스 같은 애들 꾸준히 모아가는 게 답인 듯.</p>
+            <p>또 하나, 2차전지 테마가 요즘 엄청 뜨거워. 에코프로, 포스코퓨처엠 이런 종목들 변동성 크긴 한데, 타이밍만 잘 맞추면 수익률이 장난 아니야. 근데 형, 무턱대고 들어가면 안 되고, 분할 매수 꼭 해야 해. 우리 모임에서도 이 부분 강조 많이 해.</p>
+        </section>
+
+        <section>
+            <h2>자주 묻는 질문</h2>
+            <div class="faq-item">
+                <h4>주식 완전 초보인데 괜찮을까?</h4>
+                <p>당연하지. 우리 모임에 처음 온 사람들 절반이 주식 처음 만져보는 사람들이야. 같이 용어부터 차근차근 배우면 돼.</p>
+            </div>
+            <div class="faq-item">
+                <h4>오프라인 모임은 언제 하나?</h4>
+                <p>매주 수요일 저녁 7시, 마포 셔츠룸에서 정기 모임 있어. 가끔 토요일 오후에도 열리니까 일정 보고 오면 돼.</p>
+            </div>
+            <div class="faq-item">
+                <h4>비용이 드나?</h4>
+                <p>첫 방문은 무료야. 그 다음부터는 커피값 정도만 내면 돼. 부담 없이 와서 얘기나 나누자.</p>
+            </div>
+        </section>
+
+        <div class="cta-section">
+            <h2>지금 바로 문의하세요</h2>
+            <p>궁금한 거 있으면 전화 주세요. 형들이 친절하게 알려줄게. 010-6279-0862</p>
+            <a href="tel:01062790862" class="tel-link">전화 걸기</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 마포 셔츠룸. 모든 투자 결정은 본인의 책임입니다.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
